@@ -1,8 +1,26 @@
 import { ThemedText } from '@/components/ThemedText';
 import { ThemedView } from '@/components/ThemedView';
+import React, { useState } from 'react';
 import { Pressable, StyleSheet } from 'react-native';
 
 export default function HomeScreen() {
+  const rapArtist = [
+    {rapper: 'Jay Z'},
+    {rapper: '50 Cent'},
+    {rapper: 'Lil Wayne'},
+    {rapper: 'Meek Mill'}
+  ]
+
+
+
+  const [unhidden, hidden] = useState(Array(rapArtist.length).fill(null))
+  const clicked = (index) => {
+    const nextRapper = [...unhidden];
+    nextRapper[index] = rapArtist[index].rapper;
+    hidden(nextRapper);
+  };
+
+
   return (   
     <ThemedView style={styles.container}>
     <ThemedView style={[styles.titleContainer, {backgroundColor : '#313131'}]}>
@@ -17,7 +35,7 @@ This program is very simple. I had trouble trying to convey my original idea, so
         </ThemedView>
 
     <Pressable 
-    onPress={() => console.log('JayZ')}
+    onPress={() => clicked(0)}
       style ={({pressed}) => [
         styles.stepContainer,
         {
@@ -27,13 +45,14 @@ This program is very simple. I had trouble trying to convey my original idea, so
     >
       <ThemedText style={{color: '#ff7c1e'}}type="subtitle">Song Cry</ThemedText>
       <ThemedText style={{color: '#ff9f5b'}} >
-        This artist released his hit song "Song Cry" in 2001 on his album titled "The Blueprint". Click Here To Find Out Who
+         This artist released his hit song "Song Cry" in 2001 on his album titled "The Blueprint". Click Here To Find Out Who
         </ThemedText>
+        {unhidden[0] && <ThemedText style={{color: '#ff7c1e', fontWeight: 'bold'}}>{unhidden[0]}</ThemedText>}
   
         </Pressable>
 
         <Pressable 
-    onPress={() => console.log('50Cent')}
+    onPress={() => clicked(1)}
       style ={({pressed}) => [
         styles.stepContainer,
         {
@@ -45,12 +64,13 @@ This program is very simple. I had trouble trying to convey my original idea, so
       <ThemedText style={{color: '#ff9f5b'}} >
       This artist is known for surviving getting shot 9 times and becoming a television producer for various hit shows on the Starz native app. Click Here To Find Out Who
         </ThemedText>
+        {unhidden[1] && <ThemedText style={{color: '#ff7c1e', fontWeight: 'bold'}}>{unhidden[1]}</ThemedText>}
   
         </Pressable>
 
 
         <Pressable 
-    onPress={() => console.log('LilWayne')}
+    onPress={() => clicked(2)}
       style ={({pressed}) => [
         styles.stepContainer,
         {
@@ -62,11 +82,11 @@ This program is very simple. I had trouble trying to convey my original idea, so
       <ThemedText style={{color: '#ff9f5b'}} >
       This artist carried the hip hop game on his back from 2006-2013. He's also known as his alias name "Weezy F Baby". Click Here To Find Out Who
         </ThemedText>
-  
+        {unhidden[2] && <ThemedText style={{color: '#ff7c1e', fontWeight: 'bold'}}>{unhidden[2]}</ThemedText>}
         </Pressable>
 
         <Pressable 
-    onPress={() => console.log('MeekMill')}
+    onPress={() => clicked(3)}
       style ={({pressed}) => [
         styles.stepContainer,
         {
@@ -80,7 +100,7 @@ This program is very simple. I had trouble trying to convey my original idea, so
         </ThemedText>
   
         </Pressable>
-        
+        {unhidden[3] && <ThemedText style={{color: '#ff7c1e', fontWeight: 'bold'}}>{unhidden[3]}</ThemedText>}
         </ThemedView>
 
 );
