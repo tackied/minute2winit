@@ -5,14 +5,14 @@ import { Pressable, StyleSheet } from 'react-native';
 export default function HomeScreen() {
   return (   
     <ThemedView style={styles.container}>
-    <ThemedView style={[styles.titleContainer, {backgroundColor : 'transparant'}]}>
-      <ThemedText style={{color: '#ff7c1e'}} type="title">Minute To Win It!🥇 </ThemedText>
+    <ThemedView style={[styles.titleContainer, {backgroundColor : '#313131'}]}>
+      <ThemedText style={{color: '#ff7c1e'}} type="title">Guess My Top 5 Rappers! </ThemedText>
       <ThemedView style={{height:40}}/>
     </ThemedView>
 
-    <ThemedView style={[styles.titleContainer, {backgroundColor : 'transparant'}, {marginBottom : 70}]}>
+    <ThemedView style={[styles.titleContainer, {backgroundColor : '#313131'}, {marginBottom : 70}]}>
       <ThemedText style={{color: '#ff9f5b'}} > 
-This program is targeted towards kids in elementary school to help them improve on their mathematic skills. This is part B of my Week 7 Project. Enjoy.
+This program is very simple. I had trouble trying to convey my original idea, so I decided to scrap the math game and create something else to show my understanding of React Native. Enjoy.
         </ThemedText>
         </ThemedView>
 
@@ -27,7 +27,7 @@ This program is targeted towards kids in elementary school to help them improve 
     >
       <ThemedText style={{color: '#ff7c1e'}}type="subtitle">Addition</ThemedText>
       <ThemedText style={{color: '#ff9f5b'}} >
-        You will have 60 seconds to test your addition skills. Think you can solve 60 addition questions in 60 seconds? Click Here
+        You will have 60 seconds to test your addition skills. Think you can solve 60 addition questions in 60 seconds? Click Here To Start
         </ThemedText>
   
         </Pressable>
@@ -43,7 +43,7 @@ This program is targeted towards kids in elementary school to help them improve 
     >
       <ThemedText style={{color: '#ff7c1e'}} type="subtitle">Subtraction</ThemedText>
       <ThemedText style={{color: '#ff9f5b'}} >
-        You will have 60 seconds to test your addition skills. Think you can solve 60 addition questions in 60 seconds? Click Here
+        You will have 60 seconds to test your addition skills. Think you can solve 60 addition questions in 60 seconds? Click Here To Start
         </ThemedText>
   
         </Pressable>
@@ -60,7 +60,7 @@ This program is targeted towards kids in elementary school to help them improve 
     >
       <ThemedText style={{color: '#ff7c1e'}} type="subtitle">Multiplication</ThemedText>
       <ThemedText style={{color: '#ff9f5b'}} >
-        You will have 60 seconds to test your addition skills. Think you can solve 60 addition questions in 60 seconds? Click Here
+        You will have 60 seconds to test your addition skills. Think you can solve 60 addition questions in 60 seconds? Click Here To Start
         </ThemedText>
   
         </Pressable>
