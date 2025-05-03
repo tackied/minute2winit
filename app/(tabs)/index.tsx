@@ -6,18 +6,18 @@ export default function HomeScreen() {
   return (   
     <ThemedView style={styles.container}>
     <ThemedView style={[styles.titleContainer, {backgroundColor : '#313131'}]}>
-      <ThemedText style={{color: '#ff7c1e'}} type="title">Guess My Top 5 Rappers! </ThemedText>
+      <ThemedText style={{color: '#ff7c1e'}} type="title">Guess My Top 4 Rappers! </ThemedText>
       <ThemedView style={{height:40}}/>
     </ThemedView>
 
-    <ThemedView style={[styles.titleContainer, {backgroundColor : '#313131'}, {marginBottom : 70}]}>
+    <ThemedView style={[styles.titleContainer, {backgroundColor : '#313131'}, {marginBottom : 5}]}>
       <ThemedText style={{color: '#ff9f5b'}} > 
-This program is very simple. I had trouble trying to convey my original idea, so I decided to scrap the math game and create something else to show my understanding of React Native. Enjoy.
+This program is very simple. I had trouble trying to convey my original idea, so I decided to scrap the math game and create something easier. Enjoy.
         </ThemedText>
         </ThemedView>
 
     <Pressable 
-    onPress={() => console.log('Addition')}
+    onPress={() => console.log('JayZ')}
       style ={({pressed}) => [
         styles.stepContainer,
         {
@@ -25,15 +25,15 @@ This program is very simple. I had trouble trying to convey my original idea, so
         }
       ]}
     >
-      <ThemedText style={{color: '#ff7c1e'}}type="subtitle">Addition</ThemedText>
+      <ThemedText style={{color: '#ff7c1e'}}type="subtitle">Song Cry</ThemedText>
       <ThemedText style={{color: '#ff9f5b'}} >
-        You will have 60 seconds to test your addition skills. Think you can solve 60 addition questions in 60 seconds? Click Here To Start
+        This artist released his hit song "Song Cry" in 2001 on his album titled "The Blueprint". Click Here To Find Out Who
         </ThemedText>
   
         </Pressable>
 
         <Pressable 
-    onPress={() => console.log('Subtraction')}
+    onPress={() => console.log('50Cent')}
       style ={({pressed}) => [
         styles.stepContainer,
         {
@@ -41,16 +41,16 @@ This program is very simple. I had trouble trying to convey my original idea, so
         }
       ]}
     >
-      <ThemedText style={{color: '#ff7c1e'}} type="subtitle">Subtraction</ThemedText>
+      <ThemedText style={{color: '#ff7c1e'}} type="subtitle">Power Universe</ThemedText>
       <ThemedText style={{color: '#ff9f5b'}} >
-        You will have 60 seconds to test your addition skills. Think you can solve 60 addition questions in 60 seconds? Click Here To Start
+      This artist is known for surviving getting shot 9 times and becoming a television producer for various hit shows on the Starz native app. Click Here To Find Out Who
         </ThemedText>
   
         </Pressable>
 
 
         <Pressable 
-    onPress={() => console.log('Multiplication')}
+    onPress={() => console.log('LilWayne')}
       style ={({pressed}) => [
         styles.stepContainer,
         {
@@ -58,12 +58,29 @@ This program is very simple. I had trouble trying to convey my original idea, so
         }
       ]}
     >
-      <ThemedText style={{color: '#ff7c1e'}} type="subtitle">Multiplication</ThemedText>
+      <ThemedText style={{color: '#ff7c1e'}} type="subtitle">YMCMB</ThemedText>
       <ThemedText style={{color: '#ff9f5b'}} >
-        You will have 60 seconds to test your addition skills. Think you can solve 60 addition questions in 60 seconds? Click Here To Start
+      This artist carried the hip hop game on his back from 2006-2013. He's also known as his alias name "Weezy F Baby". Click Here To Find Out Who
         </ThemedText>
   
         </Pressable>
+
+        <Pressable 
+    onPress={() => console.log('MeekMill')}
+      style ={({pressed}) => [
+        styles.stepContainer,
+        {
+          backgroundColor: pressed ? '#9d87ff' : 'transparent',
+        }
+      ]}
+    >
+      <ThemedText style={{color: '#ff7c1e'}} type="subtitle">Dreams and Nightmares</ThemedText>
+      <ThemedText style={{color: '#ff9f5b'}} >
+      This artist is notoriously known for his close association with P Diddy. Despite his recent allegations, his talent is unmatched. Click Here To Find Out Who
+        </ThemedText>
+  
+        </Pressable>
+        
         </ThemedView>
 
 );
