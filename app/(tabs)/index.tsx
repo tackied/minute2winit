@@ -7,8 +7,7 @@ export default function HomeScreen() {
   const rapArtist = [
     {rapper: 'Jay Z'},
     {rapper: '50 Cent'},
-    {rapper: 'Lil Wayne'},
-    {rapper: 'Meek Mill'}
+    {rapper: 'Lil Wayne'}
   ]
 
 
@@ -24,7 +23,7 @@ export default function HomeScreen() {
   return (   
     <ThemedView style={styles.container}>
     <ThemedView style={[styles.titleContainer, {backgroundColor : '#313131'}]}>
-      <ThemedText style={{color: '#ff7c1e'}} type="title">Guess My Top 4 Rappers! </ThemedText>
+      <ThemedText style={{color: '#ff7c1e'}} type="title">Guess My Top 3 Rappers! </ThemedText>
       <ThemedView style={{height:40}}/>
     </ThemedView>
 
@@ -45,7 +44,7 @@ This program is very simple. I had trouble trying to convey my original idea, so
     >
       <ThemedText style={{color: '#ff7c1e'}}type="subtitle">Song Cry</ThemedText>
       <ThemedText style={{color: '#ff9f5b'}} >
-         This artist released his hit song "Song Cry" in 2001 on his album titled "The Blueprint". Click Here To Find Out Who
+         This artist released his hit song "Song Cry" in 2001 on his album titled "The Blueprint". Click Here To Find Out Who Below:
         </ThemedText>
         {unhidden[0] && <ThemedText style={{color: '#ff7c1e', fontWeight: 'bold'}}>{unhidden[0]}</ThemedText>}
   
@@ -62,7 +61,7 @@ This program is very simple. I had trouble trying to convey my original idea, so
     >
       <ThemedText style={{color: '#ff7c1e'}} type="subtitle">Power Universe</ThemedText>
       <ThemedText style={{color: '#ff9f5b'}} >
-      This artist is known for surviving getting shot 9 times and becoming a television producer for various hit shows on the Starz native app. Click Here To Find Out Who
+      This artist is known for surviving getting shot 9 times and becoming a television producer for various hit shows on the Starz native app. Click Here To Find Out Who Below:
         </ThemedText>
         {unhidden[1] && <ThemedText style={{color: '#ff7c1e', fontWeight: 'bold'}}>{unhidden[1]}</ThemedText>}
   
@@ -80,27 +79,10 @@ This program is very simple. I had trouble trying to convey my original idea, so
     >
       <ThemedText style={{color: '#ff7c1e'}} type="subtitle">YMCMB</ThemedText>
       <ThemedText style={{color: '#ff9f5b'}} >
-      This artist carried the hip hop game on his back from 2006-2013. He's also known as his alias name "Weezy F Baby". Click Here To Find Out Who
+      This artist carried the hip hop game on his back from 2006-2013. He's also known as his alias name "Weezy F Baby". Click Here To Find Out Who Below:
         </ThemedText>
         {unhidden[2] && <ThemedText style={{color: '#ff7c1e', fontWeight: 'bold'}}>{unhidden[2]}</ThemedText>}
         </Pressable>
-
-        <Pressable 
-    onPress={() => clicked(3)}
-      style ={({pressed}) => [
-        styles.stepContainer,
-        {
-          backgroundColor: pressed ? '#9d87ff' : 'transparent',
-        }
-      ]}
-    >
-      <ThemedText style={{color: '#ff7c1e'}} type="subtitle">Dreams and Nightmares</ThemedText>
-      <ThemedText style={{color: '#ff9f5b'}} >
-      This artist is notoriously known for his close association with P Diddy. Despite his recent allegations, his talent is unmatched. Click Here To Find Out Who
-        </ThemedText>
-  
-        </Pressable>
-        {unhidden[3] && <ThemedText style={{color: '#ff7c1e', fontWeight: 'bold'}}>{unhidden[3]}</ThemedText>}
         </ThemedView>
 
 );
